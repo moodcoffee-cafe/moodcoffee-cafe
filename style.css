@@ -1,0 +1,498 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-color: #f5f5f5;
+    --bg-secondary: #fbfbfb;
+    --dark-gray: #333;
+    --light-brown: #c7a17a;
+    --black: #1f2226;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    padding-top: 90px;
+}
+
+h1, h2, h3 {
+    font-family: "Oswald", sans-serif;
+    color: var(--dark-gray);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 15px;
+}
+
+.text-primary {
+    color: var(--light-brown);
+}
+
+.heading {
+    text-align: center;
+}
+
+.heading span {
+    font-size: 18px;
+}
+
+.heading h2 {
+    font-size: 40px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+/* Header */
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    height: 90px;
+    z-index: 1000;
+}
+
+#header .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    height: 100%;
+}
+
+#header .navbar .logo {
+    height: 70px;
+    width: auto;
+}
+
+#header .navbar .logo img {
+    height: 100%;
+    object-fit: contain;
+}
+
+#header .navbar ul {
+    display: flex;
+    gap: 30px;
+}
+
+#header .navbar ul li a {
+    color: var(--dark-gray);
+    font-size: 18px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+#header .navbar ul li a:hover {
+    color: var(--light-brown);
+}
+
+/* Home */
+#home {
+    background-color: var(--bg-color);
+}
+
+#home .home-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100vh;
+    gap: 5rem;
+    align-items: center;
+}
+
+#home .home-content .content-text h3 {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+#home .home-content .content-text h1 {
+    font-size: 80px;
+    margin: 20px 0;
+    line-height: 1.3;
+}
+
+#home .home-content .content-text p {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+#home .home-content .content-text .btn {
+    display: inline-block;
+    margin-top: 2rem;
+    background-color: var(--light-brown);
+    color: #fff;
+    padding: 15px 25px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+#home .home-content .content-text .btn:hover {
+    background-color: var(--dark-gray);
+}
+
+#home .home-content .content-text .btn i {
+    margin-left: 5px;
+}
+
+/* About */
+#about,
+#menu,
+#testimonials,
+#contact,
+#footer .footer-top {
+    padding: 6rem 0;
+}
+
+#about .row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+#about .row .about-content h1 {
+    text-transform: uppercase;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+#about .row .about-content .item {
+    margin: 2rem 0;
+}
+
+#about .row .about-content .item h1 {
+    margin-bottom: 5px;
+    font-size: 22px;
+}
+
+/* Menu - عمودين اجباري على اللاب */
+#menu {
+    background-color: var(--bg-secondary);
+}
+
+#menu .row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 2rem;
+    gap: 5rem;
+    align-items: start;
+}
+
+#menu .row .col .item {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+    border: 1px solid #ddd;
+    padding: 25px 20px;
+    align-items: center;
+}
+
+#menu .row .col .item img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+
+#menu .row .col .item .details {
+    margin-right: 20px;
+    flex: 1;
+}
+
+#menu .row .col .item .details h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+#menu .row .col .item .details p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+#menu .row .col .item .price {
+    border-right: 1px solid #eee;
+    padding: 20px;
+}
+
+#menu .row .col .item .price p {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* Testimonials */
+#testimonials .row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 6rem;
+    gap: 2.5rem;
+}
+
+#testimonials .row .item {
+    background-color: var(--bg-color);
+    text-align: center;
+    padding: 25px 25px 35px;
+}
+
+#testimonials .row .item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    margin-top: -50px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+#testimonials .row .item h3 {
+    margin: 20px 0 10px;
+}
+
+#testimonials .row .item p {
+    line-height: 1.6;
+}
+
+/* Contact - جنب بعض اجباري على اللاب */
+#contact {
+    padding: 60px 20px;
+    background: #f8f8f8;
+}
+
+#contact .contact-row {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-items: flex-start;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#contact .maps-column {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#contact .contact-content {
+    width: 50%;
+}
+
+#contact .map iframe {
+    width: 100%;
+    height: 280px;
+    border: 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+#contact .contact-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 110px;
+}
+
+#contact .contact-content form input,
+#contact .contact-content form textarea {
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+#contact .contact-content form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+#contact .btn-submit {
+    background-color: #000000;
+    color: white;
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#contact .btn-submit:hover {
+    background-color:  var(--light-brown);
+}
+
+/* Footer */
+#footer .footer-top {
+    background: url(n.jpg);
+    background-size: cover;
+    color: #fff;
+}
+
+#footer .footer-top .row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 3rem;
+}
+
+#footer .footer-top .row .col h3 {
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+#footer .footer-top .row .col p {
+    max-width: 400px;
+    line-height: 1.6;
+}
+
+#footer .footer-top .row .col ul li {
+    margin: 10px 0;
+}
+
+#footer .footer-top .row .col ul li i {
+    margin-left: 10px;
+}
+
+#footer .footer-top .row .col ul li a {
+    color: #fff;
+}
+
+/* موبايل فقط */
+@media only screen and (max-width: 768px) {
+    html {
+        scroll-padding-top: 70px;
+    }
+    
+    body {
+        padding-top: 70px;
+    }
+    
+    #header {
+        height: 70px;
+    }
+    
+    #header .navbar {
+        width: 95%;
+    }
+    
+    #header .navbar .logo {
+        height: 50px;
+    }
+    
+    #header .navbar ul {
+        gap: 8px;
+    }
+    
+    #header .navbar ul li a {
+        font-size: 13px;
+    }
+    
+    .heading h2 {
+        font-size: 32px;
+    }
+    
+    #home .home-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    #home .home-content .content-text h1 {
+        font-size: 40px;
+    }
+    
+    #home .home-content .content-text h3 {
+        font-size: 18px;
+    }
+    
+    #about .row {
+        grid-template-columns: 1fr;
+    }
+    
+    #about,
+    #menu,
+    #testimonials,
+    #contact,
+    #footer .footer-top {
+        padding: 3rem 0;
+    }
+    
+    #menu .row {
+        grid-template-columns: 1fr;
+        margin: 2rem 0;
+        gap: 2rem;
+    }
+    
+    #menu .row .col .item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    #menu .row .col .item img {
+        margin: 0 auto 15px;
+    }
+    
+    #menu .row .col .item .price {
+        border-right: none;
+        border-top: 1px solid #eee;
+        padding: 15px 0 0;
+        width: 100%;
+    }
+    
+    #contact .contact-row {
+        flex-direction: column;
+    }
+    
+    #contact .maps-column,
+    #contact .contact-content {
+        width: 100%;
+    }
+    
+    #contact .contact-content form {
+        position: static;
+    }
+    
+    #testimonials .row {
+        grid-template-columns: 1fr;
+    }
+    
+    #footer .footer-top .row {
+        grid-template-columns: 1fr;
+    }
+    
+    #contact {
+        padding: 30px 10px;
+    }
+}

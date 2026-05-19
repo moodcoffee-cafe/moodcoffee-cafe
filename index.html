@@ -153,15 +153,25 @@
                     </div>
                 </div>
             </div>
-            <p style="text-align:center; margin-top:30px;">
-              <button onclick="document.getElementById('sideMenu').style.display='block'" style="background:#8B4513; color:#fff; padding:10px 20px; border:none; border-radius:5px; cursor:pointer;">☕ عرض القائمة الكاملة (PDF)</button>
-            </p>
-        </div>
-        
-        <div id="sideMenu" style="display:none; position:fixed; top:0; left:0; width:40%; height:100%; background:#fdfaf6; box-shadow:3px 0 8px rgba(0,0,0,0.3); z-index:9999; padding:10px;">
-            <button onclick="document.getElementById('sideMenu').style.display='none'" style="background:#4B2E2E; color:#fff; padding:8px 12px; border:none; border-radius:5px; cursor:pointer; float:right; margin-bottom:10px;">✖ قفل</button>
-            <iframe src="menu_compressed.pdf" width="100%" height="90%" style="border:none;"></iframe>
-        </div>
+             <p style="text-align:center; margin-top:30px;">
+  <button onclick="document.getElementById('sideMenu').style.display='block'" 
+          style="background:#8B4513; color:#fff; padding:10px 20px; border:none; border-radius:5px; cursor:pointer;">
+    ☕ عرض القائمة الكاملة (PDF)
+  </button>
+</p>
+
+<div id="sideMenu" style="display:none; position:fixed; top:50%; left:50%; 
+     transform:translate(-50%, -50%); width:60%; height:80%; background:#fdfaf6; 
+     box-shadow:0 0 15px rgba(0,0,0,0.4); z-index:9999; padding:10px; border-radius:10px;">
+  
+  <button onclick="document.getElementById('sideMenu').style.display='none'" 
+          style="background:#4B2E2E; color:#fff; padding:8px 12px; border:none; 
+          border-radius:5px; cursor:pointer; float:right; margin-bottom:10px;">
+    ✖ قفل
+  </button>
+  
+  <iframe src="menu_compressed.pdf" width="100%" height="90%" style="border:none;"></iframe>
+</div>
     </section>
 
     <section id="testimonials">
